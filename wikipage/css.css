@@ -1,0 +1,35 @@
+html{
+    background-color: #eeeeee;
+}
+
+body{
+    margin: 0 2% 0 2%;
+    padding: 0 3% 0 3%;
+    background-color: white;
+}
+
+.header{
+    width: 100%;
+    display: flex;
+
+}
+
+.logo-parent{
+
+}
+
+.logo{
+    width: 12.5%;
+}
+
+.search-login-parent{
+    width: 30%;
+}
+
+.search{
+    border: 1px solid black;
+}
+
+.search-icon{
+    width: 1.2%;
+}
