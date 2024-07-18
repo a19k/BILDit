@@ -1,35 +1,66 @@
-html{
-    background-color: #eeeeee;
-}
+
 
 body{
-    margin: 0 2% 0 2%;
     padding: 0 3% 0 3%;
     background-color: white;
 }
 
-.header{
+header{
     width: 100%;
     display: flex;
-
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo-parent{
-
+    width: 12.5vw;
+    margin: 0;
 }
-
 .logo{
-    width: 12.5%;
+    width: 100%;
+    margin: 0;
 }
+
 
 .search-login-parent{
-    width: 30%;
+    margin: 0 0 0 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .search{
+    width: fit-content;
     border: 1px solid black;
 }
 
+.searchbar{
+    width: 85%;
+    display: inline-block;
+
+}
+
+.search-button{
+    display: inline-block;
+}
+
 .search-icon{
+    display: inline-block;
     width: 1.2%;
+}
+
+.login{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 15vw;
+}
+
+.login a{
+    text-decoration: none;
+}
+
+#dots-icon{
+    width: 10%;
+    height: fit-content;
 }
