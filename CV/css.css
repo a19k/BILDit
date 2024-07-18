@@ -1,0 +1,87 @@
+
+body{
+    background-color: #f0f0f0;
+}
+
+/* Main */
+
+main{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -1%;
+    margin-bottom: -1%;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    padding: 3em;
+    background: linear-gradient(-60deg,#c0eafa 0%,#c0eaea 10%,#c0faea 20%,#ffffff 30%,#ffffff 70%,#c0faea 80%,#c0eaea 90%,#c0eafa 100%);
+}
+
+h3{
+    margin-bottom: 3em;
+}
+
+.info{
+    
+    border-bottom: 1px solid black;
+}
+
+/* Section */
+
+section{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+}
+
+/* Summary */
+
+.summary{
+    text-align:justify;
+}
+
+/* Experience */
+
+.item{
+    display: block;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.period{
+    display: inline-block;
+    text-align: left;
+    width: 40%;
+}
+
+.occupation{
+    display: inline-block;
+    text-align: right;
+    width: 60%;
+    vertical-align: top;
+}
+
+/* Skills */
+
+ul{
+    display: inline-block;
+    vertical-align: top;
+    margin: auto;
+}
+
+#ul-combo{
+    display: block;
+    margin: auto;
+    width:max-content;
+}
+
+/* Education */
+
+.degree{
+    display: block;
+    margin-left: 5em;
+    width: 60%;
+}

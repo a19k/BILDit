@@ -1,0 +1,229 @@
+
+
+#logo{
+    display: block;
+    margin: auto;
+    margin-top: 3.5rem;
+    margin-bottom: 1.6rem;
+}
+
+/* HEADER */
+
+header{
+    top: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    justify-content:end;
+    align-items: center;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+.googleapps{
+    width: 2%;
+    height: max-content;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+
+.signin{
+    width:  6rem;
+    height: 2.9em;
+    margin-right: 2em;
+    border-radius: 25px;
+    color: white;
+    background-color: rgb(0, 56, 209);
+    border: none;
+    font-size: 14px;
+    text-align: center;
+    vertical-align: middle;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+
+.signin p{
+    color: white;
+}
+
+.signin:hover{
+    box-shadow: 0 1px 5px 2px rgba(0, 0, 0, 0.2);
+}
+
+
+header p{
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+
+header a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.75);
+}
+
+header a:visited{
+    color: rgba(0, 0, 0, 0.75);
+}
+
+header a:hover{
+    color: rgba(0, 0, 0, 0.75);
+}
+
+header a:active{
+    color: rgba(0, 0, 0, 0.75);
+}
+
+/* MAIN */
+
+form{
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+fieldset{
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* SEARCH BAR */
+
+.searchbar{
+    height: 2.8rem;
+    width: 36.4rem;
+    border: 1px solid #dddddd;
+    border-radius: 25px;
+    display: flex;
+}
+
+.searchbar:hover{
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+#searchfield{
+    width: 76%;
+    border: none;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.75);
+}
+
+#searchfield:focus{
+    outline: 0;
+}
+
+#searchfield::-webkit-search-cancel-button{
+    position: relative;
+    right: 20px;
+    -webkit-appearance:none;
+}
+
+#magnifier{
+    width: 2.5%;
+    height: max-content;
+    margin: auto 1em auto 1em;
+}
+
+#micsearch{
+    width: 2.5%;
+    margin: auto;
+}
+
+#glens{
+    width: 4%;
+    margin: auto;
+}
+
+/* SEARCH BUTTONS */
+
+.searchbuttons{
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+}
+
+.button{
+    width: 21%;
+    height: 2.5em;
+    margin: 0 0.5em 0 0.5em;
+    background-color: #dddddd2e;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.75);
+}
+
+#imfeelinglucky{
+    width: 25%;
+}
+
+.button:hover{
+    border: 1px solid rgba(0, 0, 0, 0.2) ;
+}
+
+/* LANGUAGE OFFERS */
+
+.language-offer{
+    margin: 2em auto;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.75);
+    font-size: 13px;
+    font-family: sans-serif;
+}
+
+/* FOOTER */
+
+footer{
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.05);
+    font-size: 15px;
+    font-family: sans-serif;
+    color: rgba(0, 0, 0, 0.75);
+}
+
+.region{
+    padding-left: 1.5%;
+}
+
+
+.lowfoot{
+    display: flex;
+    justify-content: space-between;
+}
+
+.lowfoot-left{
+    display: flex;
+    padding-left: 1.5%;
+}
+
+.lowfoot-right{
+    display: flex;
+    padding-right: 1.5%;
+}
+
+footer p{
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+footer a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.75);
+}
+
+footer a:visited{
+    color: rgba(0, 0, 0, 0.75);
+}
+
+footer a:hover{
+    color: rgba(0, 0, 0, 0.75);
+}
+
+footer a:active{
+    color: rgba(0, 0, 0, 0.75);
+}
