@@ -2,40 +2,63 @@ body{
     background-color: #1f1f1f;
 }
 
+img{
+    display: block;
+    width: 25%;
+}
+
 main{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     margin: auto;
-    width: 40%;
+    width: 50%;
     background-color: white;
     font-family: sans-serif;
     color: rgba(0, 0, 0, 0.9);
-    padding: 3rem;
+    padding: 0;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.035);
+}
+
+#shell{
+    background-color: white;
+    padding: 1rem;
 }
 
 .about-me{
-    width: 100%;
-    margin-bottom: 5rem;
+
+    margin-bottom: 1rem;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 1rem;
 }
 
 .my-work{
-    width: 100%;
+
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 1rem;
 }
 
-#heading2,.projects{
-    margin-bottom: 6rem;
-}
 
 p{
     font-size: 12px;
 }
 
-.projects p{
-    margin: 0 3em 0 3em ;
-}
-
 .projects{
     display: flex;
+    justify-content: space-evenly;
+}
+
+.pr1,.pr2,.pr3{
+    padding: 3rem;
+    border: 1px dashed black;
+}
+
+.footer{
+    padding: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.1);
+    text-align: center;
 }

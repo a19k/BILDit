@@ -1,21 +1,68 @@
 header{
     top: 0;
+    left: 0;
     width: 100%;
-    height: 40vh;
+    position: fixed;
+    height: 45vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
     font-family: sans-serif;
-    padding-top: 2rem;
-    background-color: bisque;
+    padding: 1rem 0 1rem 0;
+    background-image: url("bg.jpg");
+    color: rgba(0, 0, 0, 0.8);
 }
 
 h1{
     font-size: 50px;
+    margin: 0;
 }
 
 button{
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    width: 7%;
+    height: 12%;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(0, 100, 230);
+    color: rgb(240, 240, 240);
+}
+
+body{
+    background-color: aliceblue;
+    margin-top: 50vh;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem;
+}
+
+div{
+    display: block;
+    width: fit-content;
+    padding: 1rem;
+    border: none;
+    border-radius: 3px;
+    margin: 0.5rem;
+    font-family: sans-serif;
+    background-color: white;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+footer{
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    font-family: sans-serif;
+    background-color: #1f1f1f;
+    color: rgb(240, 240, 240);
+}
+h3,p{
+    text-align: center;
 }
