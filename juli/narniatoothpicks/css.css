@@ -1,0 +1,104 @@
+
+body{
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #758086;
+}
+
+header{
+    margin: 0;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #2b4448;
+}
+
+
+.logo{
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+}
+
+.logo img{
+    display: inline-block;
+    max-width: 10%;
+    height: fit-content;
+}
+
+.logo h1{
+    display: inline-block;
+    color: #758086;
+}
+
+
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+}
+
+nav > ul > a{
+    text-decoration: none;
+}
+
+nav > ul > a > li{
+    width: 5rem;
+    margin-right: 1rem;
+    padding: 0.5rem;
+    border-radius: 1px;
+    background-color: rgb(237, 106, 64);
+    color: #2b4448;
+    text-align: center;
+}
+
+
+
+main{
+    flex: 1;
+}
+
+.art{
+ margin: 0;
+ width: fit-content;
+}
+
+.art img{
+    float: right;
+    display: block;
+    max-width: 50%;
+    border-width: 20px;
+    border-style: ridge;
+    border-color: #ed6a40 #758086;
+    border-end-start-radius: 30%;
+    border-top: none;
+    border-right: none;
+}
+
+
+footer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #2b4448;
+    color: #ed6a40;
+}
+
+address{
+    display: flex;
+    flex-direction: column;
+}
+
+address p{
+    margin: 0;
+}
+address label{
+    color: #0866FF;
+}
+
+footer a{
+    text-decoration: none;
+}

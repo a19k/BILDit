@@ -1,0 +1,89 @@
+
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0 1rem 0;
+    font-family: sans-serif;
+    color: #f1f1f1;
+    background-color: rgb(37, 98, 116);
+}
+
+header h1, header div{
+    margin: auto 1rem auto 1rem;
+}
+
+header div{
+    display: flex;
+}
+
+header > div > p{
+    margin-left: 1rem;
+}
+
+
+
+body{
+    position: relative;
+    top: 4.5rem;
+    left: 0;
+    margin: 0;
+}
+
+.welcome{
+    max-height: 50vh;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-image: url("bg.jpg");
+}
+
+.welcome div{
+    display: block;
+    margin: auto;
+    width: fit-content;
+    padding: 1rem;
+    font-family: sans-serif;
+    color: #f1f1f1;
+    text-align: center;
+    background-color: rgba(31, 31, 31, 0.8);
+}
+
+button{
+    padding: 0.5rem;
+    border: none;
+    border-radius: 3px;
+    background-color: rgb(255, 106, 42);
+    color: #f1f1f1;
+}
+
+
+.services,.about-us,.contact{
+    padding: 1rem;
+    font-family: sans-serif;
+}
+
+.about-us{
+    background-color: rgb(204, 204, 204);
+}
+
+.services h3{
+    color: rgb(42, 116, 255);
+}
+.about-us h3{
+    color: rgb(30, 212, 33);
+}
+.contact h3{
+    color: rgb(255, 42, 42);
+}
+
+footer{
+    font-family: sans-serif;
+    padding: 0.5rem;
+    text-align: center;
+    color: #f1f1f1;
+    background-color: rgb(37, 98, 116);
+}
