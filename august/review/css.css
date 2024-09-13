@@ -1,0 +1,85 @@
+:root{
+    --blue :rgb(99, 189, 192);
+    --orange :rgb(212, 119, 52);
+}
+
+
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-wrap: wrap;
+    margin: 5rem;
+    background-color: cadetblue;
+    display: flex;
+    flex-direction: column;
+}
+
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(var(--orange),rgba(0, 0, 0, 0.5));
+    padding: 0;
+    box-shadow: var(--orange) 0 0 10px;
+
+}
+
+figure{
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+#slika{
+    max-width: 100px;
+    padding-right: 1rem;
+}
+
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+    margin-right: 5rem;
+}
+
+a:hover{
+    transform: scale(1.05);
+    border-color: black;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    border: 3px solid rgba(0, 0, 0, 0.5);
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    box-shadow:rgba(0, 0, 0, 0.5) 0 0 2px;
+}
+
+a > div{
+    padding: 1rem;
+    background-color: var(--blue);
+}
+
+
+
+main{
+    background: linear-gradient(0deg, var(--blue),rgba(0, 0, 0, 0.5));
+    padding: 0 2rem;
+}
+
+.bass{
+    width: 30vw;
+    min-width: 100px;
+    float: left;
+}
+
+.info >p ,.info >h1{
+    display: inline;
+}
+
+.table{
+    display: block;
+}
+
