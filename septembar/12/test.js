@@ -1,0 +1,1 @@
+console.log("Zadaća 7!");
