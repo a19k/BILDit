@@ -1,35 +1,100 @@
 
 
-class Racun{
+class Racun {
     #broj_racuna;
     #ime_vlasnika;
     #stanje;
+    static #brojac_racuna = 0;
+    static #racuni=[]; 
 
-    constructor(broj_racuna,ime_vlasnika,stanje=0){
-        if(stanje<0)return;
-        this.#broj_racuna=broj_racuna;
-        this.#ime_vlasnika=ime_vlasnika;
-        this.#stanje=stanje;
+    constructor(ime_vlasnika, stanje = 0) {
+        this.#broj_racuna = ++(Racun.#brojac_racuna);
+        this.#ime_vlasnika = ime_vlasnika;
+        this.#stanje = stanje;
+
+        if(stanje>=0)
+            Racun.#racuni.push(this);
+        else
+            console.log("Stanje računa ne smije biti negativno!");
     }
-
-    get broj_racuna(){
+    
+    get broj_racuna() {
         return this.#broj_racuna;
     }
-  //set broj_racuna je nepoželjno mijenjati
-    get ime_vlasnika(){
+    //set broj_racuna je nepoželjno mijenjati
+
+    get ime_vlasnika() {
         return this.#ime_vlasnika;
     }
-    set ime_vlasnika(ime){
-        this.#ime_vlasnika=ime;
-    }
-    get stanje(){
-        return this.#stanje;
-    }
-    set stanje(delta){
-        this.#stanje+=delta;
+    set ime_vlasnika(ime) {
+        this.#ime_vlasnika = ime;
     }
 
-    prikaziInformacije(){
+    get stanje() {
+        return this.#stanje;
+    }
+    set stanje(delta) {
+        this.#stanje += delta;
+    }
+
+    get brojac_racuna(){
+        return this.brojac_racuna;
+    }
+    //brojac_racuna je nepoželjno ručno mijenjati
+
+    static getRacun(broj_racuna){
+
+        return Racun.#racuni.find((element)=>{
+            if(element.broj_racuna===broj_racuna)
+                return true;
+        })
+
+    }
+
+    static transakcija(broj_racuna_source,broj_racuna_destination,kolicina){
+        const source=Racun.getRacun(broj_racuna_source);
+        const destination=Racun.getRacun(broj_racuna_destination);
+
+        if(source===undefined || destination===undefined){
+            console.log("Nevažeći računi!");
+            return false;
+        }
+        else if(kolicina<=0){
+            console.log("Nepravilan unos!");
+            return false;
+        }
+        else if(source.stanje<kolicina){
+            console.log("Nedovoljno sredstava na računu! : ",this.stanje);
+            return false;
+        }
+        else{
+            source.stanje=-kolicina;
+            destination.stanje=+kolicina;
+            return true;
+        }
+    }
+
+    povrat(kolicina){
+        if(kolicina<=0){
+            console.log("Nepravilan unos!");
+            return;
+        }
+        else if(this.#stanje<kolicina){
+            console.log("Nedovoljno sredstava na računu! : ",this.stanje);
+            return;
+        }
+        else this.stanje=-kolicina;
+    }
+    depozit(kolicina){
+        if(kolicina<=0){
+            console.log("Nepravilan unos!");
+            return;
+        }
+
+        this.stanje=kolicina;
+    }
+
+    prikaziInformacije() {
         console.log("------------------------------");
         console.log("Broj Racuna : " + this.broj_racuna);
         console.log("Ime Vlasnika : " + this.ime_vlasnika);
@@ -38,47 +103,44 @@ class Racun{
     }
 }
 
-function provjeriBrojRacuna(broj_racuna){
-    let duzina_stringa=broj_racuna_trenutnog_racuna.length;
-    let neispravno=false;
 
-    if(duzina_stringa!==13){//provjerava dužinu stringa
-    console.log("Broj računa se mora sastojati od 13 karaktera");
-    neispravno=true;
+class Checking extends Racun{
+
+    constructor(ime_vlasnika,stanje){
+        super(ime_vlasnika,stanje);
     }
 
-    for(let i=0;i<12;i++)//provjerava 12 cifara u stringu
-        if(typeof broj_racuna_trenutnog_racuna[i]!=='string'){
-            console.log("Format broja računa mora biti : XXXXXXXXXXXXR (X - cifra)!");
-            neispravno=true;
-            break;
-        }
-    
-    if(broj_racuna_trenutnog_racuna[duzina_stringa-1]!=='R'){//provjerava 1 slovo u stringu
-        console.log("Zadnji karakter mora biti R!");
-        neispravno=true;
-    }
-
-    return neispravno;
 }
 
-function provjeriStanjeRacuna(stanje){
-    if(stanje<0){
-        console.log("Error : Stanje računa ne smije biti manje od 0");
-        return true
+
+class Savings extends Racun{
+
+    constructor(ime_vlasnika,stanje){
+        super(ime_vlasnika,stanje);
     }
-    else return false;
+
 }
 
-let broj_racuna_trenutnog_racuna="012345678910R".toUpperCase();
-let ime_vlasnika_trenutnog_racuna="Karić Anis";
-let stanje_trenutnog_racuna=-10;
 
-let racunOsobeA;
+new Racun("Karić Anis");
+new Checking("Jeff Bezos",1234567);
+new Savings("Mufid Kokuz",400)
 
-if(provjeriBrojRacuna(broj_racuna_trenutnog_racuna)===false)
-    if(provjeriStanjeRacuna(stanje_trenutnog_racuna)===false)
-        racunOsobeA=new Racun(broj_racuna_trenutnog_racuna,ime_vlasnika_trenutnog_racuna,-1);
 
-racunOsobeA.prikaziInformacije();
-console.log(racunOsobeA);
+let nekiRacun1=Racun.getRacun(1);
+nekiRacun1.depozit(15)
+nekiRacun1.povrat(40);
+nekiRacun1.povrat(nekiRacun1.stanje);
+
+console.log(Racun.transakcija(2,1,100));
+console.log(Racun.transakcija(3,2,400));
+
+
+let nekiRacun2=Racun.getRacun(2);
+let nekiRacun3=Racun.getRacun(3);
+
+console.log(nekiRacun1.prikaziInformacije());
+console.log(nekiRacun2.prikaziInformacije());
+console.log(nekiRacun3.prikaziInformacije());
+
+
