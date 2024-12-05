@@ -6,11 +6,13 @@ class Racun {
     #stanje;
     static #brojac_racuna = 0;
     static #racuni=[]; 
+    #tip_racuna;
 
-    constructor(ime_vlasnika, stanje = 0) {
+    constructor(ime_vlasnika, stanje = 0 , tip) {
         this.#broj_racuna = ++(Racun.#brojac_racuna);
         this.#ime_vlasnika = ime_vlasnika;
         this.#stanje = stanje;
+        this.#tip_racuna=tip;
 
         if(stanje>=0)
             Racun.#racuni.push(this);
@@ -57,6 +59,10 @@ class Racun {
 
         if(source===undefined || destination===undefined){
             console.log("Nevažeći računi!");
+            return false;
+        }
+        else if(source.tip!=="checking"){
+            console.log("Račun koji pokreće transakciju mora biti Checking Račun!");
             return false;
         }
         else if(kolicina<=0){
@@ -107,7 +113,7 @@ class Racun {
 class Checking extends Racun{
 
     constructor(ime_vlasnika,stanje){
-        super(ime_vlasnika,stanje);
+        super(ime_vlasnika,stanje,"checking");
     }
 
 }
@@ -116,7 +122,7 @@ class Checking extends Racun{
 class Savings extends Racun{
 
     constructor(ime_vlasnika,stanje){
-        super(ime_vlasnika,stanje);
+        super(ime_vlasnika,stanje,"savings");
     }
 
 }
@@ -124,11 +130,11 @@ class Savings extends Racun{
 
 new Racun("Karić Anis");
 new Checking("Jeff Bezos",1234567);
-new Savings("Mufid Kokuz",400)
+new Savings("Mufid Kokuz",400);
 
 
 let nekiRacun1=Racun.getRacun(1);
-nekiRacun1.depozit(15)
+nekiRacun1.depozit(15);
 nekiRacun1.povrat(40);
 nekiRacun1.povrat(nekiRacun1.stanje);
 
@@ -136,11 +142,11 @@ console.log(Racun.transakcija(2,1,100));
 console.log(Racun.transakcija(3,2,400));
 
 
-let nekiRacun2=Racun.getRacun(2);
-let nekiRacun3=Racun.getRacun(3);
+let checkingRacun=Racun.getRacun(2);
+let savingsRacun=Racun.getRacun(3);
 
 console.log(nekiRacun1.prikaziInformacije());
-console.log(nekiRacun2.prikaziInformacije());
-console.log(nekiRacun3.prikaziInformacije());
+console.log(checkingRacun.prikaziInformacije());
+console.log(savingsRacun.prikaziInformacije());
 
 
