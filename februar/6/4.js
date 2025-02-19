@@ -23,13 +23,16 @@ const balansiraneZagrade=(str)=>{
         else if(e==="{")currentlyOpen.push("}");
         
         if(e===")"){
-            if(currentlyOpen.length===0 || currentlyOpen.at(-1)!==e) isBalanced=false;
+            if(currentlyOpen.length===0 || currentlyOpen.at(-1)!==e){ isBalanced=false; currentlyOpen.pop();}
+            else currentlyOpen.pop();
         }
         else if(e==="]"){
-            if(currentlyOpen.length===0 || currentlyOpen.at(-1)!==e) isBalanced=false;
+            if(currentlyOpen.length===0 || currentlyOpen.at(-1)!==e){ isBalanced=false; currentlyOpen.pop();}
+            else currentlyOpen.pop();
         }
         else if(e==="}"){
-            if(currentlyOpen.length===0 || currentlyOpen.at(-1)!==e) isBalanced=false;
+            if(currentlyOpen.length===0 || currentlyOpen.at(-1)!==e){ isBalanced=false; currentlyOpen.pop();}
+            else currentlyOpen.pop();
         }
     });
 
