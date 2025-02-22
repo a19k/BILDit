@@ -7,15 +7,16 @@ Kada korisnik klikne na dugme, veličina fonta u <p> elementu treba da se poveć
 
 const container = document.querySelector("#container");
 const p = container.querySelector("#paragraph");
-p.style.fontSize=16;
+p.style.fontSize = "16";
+pFontSizeDummy = 16;
 
 const btnUp = document.createElement("button");
 btnUp.textContent = "Povećaj tekst";
-btnUp.addEventListener("click",()=>{
-    p.style.fontSize = +p.style.fontSize + 1;
-});
+btnUp.addEventListener("click",()=>{p.style.fontSize = ++pFontSizeDummy;});
 
 const btnDown = document.createElement("button");
 btnDown.textContent = "Smanji tekst";
+btnDown.addEventListener("click",()=>{p.style.fontSize = --pFontSizeDummy;})
 
 container.appendChild(btnUp);
+container.appendChild(btnDown);
